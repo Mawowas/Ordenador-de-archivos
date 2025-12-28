@@ -1,7 +1,8 @@
 from pathlib import Path
 
 def main():
-    ruta = r"C:\MTS\estudios\python\automatizador de ordenamiento de archivos\carpeta"
+    # vvv  aqui va la carpeta que se desea ordenar
+    ruta = r" ... "
     #ruta = r"\carpeta"
     
     p = Path(ruta)
