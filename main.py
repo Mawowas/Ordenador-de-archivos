@@ -2,8 +2,6 @@ from pathlib import Path
 import tkin
 
 def main():
-    #ruta = r"C:\MTS\estudios\python\automatizador de ordenamiento de archivos\carpeta"
-    #ruta = r"\carpeta"
 
     ruta = tkin.direccion()
     
@@ -47,20 +45,12 @@ def main():
                 archivo.move_into(p / value)
                 #archivo.joinpath(p).move_into(value)
 
-    # for archivo in p.iterdir():
-    #     for key, value in tipo_archivos.items():
-    #         if isinstance(value, list):
-    #             if archivo.name.endswith(value) in value:
-    #                 archivo.joinpath(p).move(key)
-    #         else:
-    #             archivo.joinpath(p).move(key)
 
 def existencia_de_carpetas(p, tipo_archivos) -> bool:
     
     for file in p.iterdir():
         if file.is_dir() and file.name in tipo_archivos.keys():
             return True
-        
     return False
 
 
